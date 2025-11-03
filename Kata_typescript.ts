@@ -36,7 +36,7 @@ export function basicOp(operation: string, value1: number, value2: number): numb
 function stringToArray(s: string): string[] {
     return s.split(" ");
 }
-console.log(stringToArray("Изключително интересни срещи ни очакват тази вечер в осмия кръг на Евролигата."));
+//console.log(stringToArray("Изключително интересни срещи ни очакват тази вечер в осмия кръг на Евролигата."));
 
 
 
@@ -70,3 +70,84 @@ export function positiveSum(arr: number[]): number {
     return sum;
 }
 
+
+
+
+
+// +++++ KATA7 - If you can't sleep, just count sheeps!! 
+
+export function countSheep(num: number): string {
+    let result = '';
+    for (let i = 1; i <= num; i++) {
+        result += `${i} sheep...`;
+    }
+    return result;
+}
+
+
+
+
+export function countSheepArr(num: number): string {
+    return Array.from({ length: num }, (_, i) => `${i + 1} sheep...`).join('');
+}
+
+
+
+// KATA8 - Write a function which converts the input string to uppercase.
+
+export function makeUpperCase(str: string): string {
+    return str.toUpperCase();
+}
+
+
+
+// KATA9 - Will you make it?
+
+export const zeroFuel = (distance: number, mpg: number, fuelLeft: number): boolean => {
+    if (mpg * fuelLeft >= distance) {
+        return true;
+    } else { return false; }
+};
+
+
+export const zeroFuel2 = (distance: number, mpg: number, fuelLeft: number): boolean => {
+   return mpg * fuelLeft >= distance
+};
+
+//console.log(zeroFuel2(60,25,2));
+
+
+// KATA 10 - Breaking chocolate problem
+
+// n - rows
+// m - columns
+
+export function breakChocolate(n: number, m: number): number {
+  // If input is invalid or no chocolate exists, return 0
+  if (n <= 0 || m <= 0) return 0;
+
+  // Minimum breaks needed = total squares - 1
+  return n * m - 1;
+}
+
+//console.log(breakChocolate(7,4));
+
+
+
+// KATA 11 - Descending Order
+
+export function descendingOrder(n: number): number {
+  return parseInt(          // Converts the string back to a number.
+    n
+      .toString()  //  Converts the number to a string so we can manipulate digits.
+      .split('')   //  Turns it into an array of individual characters (digits).
+      .sort((a, b) => Number(b) - Number(a))  // Sorts digits in descending numerical order.
+      .join('')    // Joins them back into a string
+  );
+}
+
+//console.log(descendingOrder(2384692));
+
+
+
+// KATA12 

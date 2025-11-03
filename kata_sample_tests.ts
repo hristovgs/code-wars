@@ -68,3 +68,85 @@ describe("solution", function(){
     assert.equal(positiveSum([-1,2,3,4,-5]),9);
   });
 });
+
+
+
+// +++++ KATA7 - If you can't sleep, just count sheeps!! 
+
+//sample test
+import {countSheep}  from "e:/Pragmatic_AT_PT/repository/Code_Wars/Kata_typescript";
+
+
+describe("Sample Test Cases", function(){
+  it("Should return a string", function() {
+    assert.equal(countSheep(0), '');
+    assert.equal(countSheep(1), '1 sheep...');
+    assert.equal(countSheep(2), '1 sheep...2 sheep...');
+    assert.equal(countSheep(3), '1 sheep...2 sheep...3 sheep...');
+  });
+});
+
+
+// ++++++ KATA8 - Write a function which converts the input string to uppercase.
+
+import { makeUpperCase } from "e:/Pragmatic_AT_PT/repository/Code_Wars/Kata_typescript";
+
+describe("MakeUpperCase", () => {
+  it("Fixed tests", () => {
+    assert.strictEqual(makeUpperCase("hello"), "HELLO");
+    assert.strictEqual(makeUpperCase("hello world"), "HELLO WORLD");
+    assert.strictEqual(makeUpperCase("hello world !"), "HELLO WORLD !");
+    assert.strictEqual(makeUpperCase("heLlO wORLd !"), "HELLO WORLD !");
+    assert.strictEqual(makeUpperCase("1,2,3 hello world!"), "1,2,3 HELLO WORLD!");
+  });
+});
+
+
+// ++++++  KATA9 - Will you make it?
+
+//sample test 
+
+import {zeroFuel} from "e:/Pragmatic_AT_PT/repository/Code_Wars/Kata_typescript";
+//import {assert} from "chai";
+
+describe("zeroFill", function() {
+  it("Sample Tests", function() {
+    assert.equal(zeroFuel(50, 25, 2), true);
+    assert.equal(zeroFuel(100, 50, 1), false);
+  });
+});
+
+
+
+// +++++ KATA10 - Breaking chocolate problem
+
+
+// sample test
+import { breakChocolate } from "e:/Pragmatic_AT_PT/repository/Code_Wars/Kata_typescript";
+
+describe( "Breaking chocolate", ()=>{
+  it( "Fixed tests", ()=>{
+    assert.strictEqual( breakChocolate(5,5), 24 );
+    assert.strictEqual( breakChocolate(7,4), 27 );
+    assert.strictEqual( breakChocolate(1,1), 0 );
+    assert.strictEqual( breakChocolate(0,0), 0, "What If I Told You There is No Chocolate?" );
+    assert.strictEqual( breakChocolate(6,1), 5 );
+  });
+});
+
+
+
+// +++++ KATA11 - Descending Order
+
+//sample test
+
+import { descendingOrder } from "e:/Pragmatic_AT_PT/repository/Code_Wars/Kata_typescript";
+
+
+describe("descendingOrder", function() {
+  it("should return some sample numbers in descending order", function() {
+    assert.strictEqual(descendingOrder(0), 0);
+    assert.strictEqual(descendingOrder(1), 1);
+    assert.strictEqual(descendingOrder(123456789), 987654321);
+  });
+});
